@@ -66,15 +66,15 @@ end
 -- local r, g, b = style.bgcolor:match("([^,]+),([^,]+),([^,]+)")
 -- window:over(0, Gdk.RGBA { red = tonumber(r), green = tonumber(g), blue = tonumber(b), alpha = tonumber(style.opacity)})
 
-window:fullscreen()
-window:set_keep_above(true)
+
 local buttonbox = window.child.buttonbox
 for i, v in ipairs(style.buttons) do
     local label, icon, shortcut, command = v:match("([^,]+),([^,]+),([^,]+),([^,]+)")
     buttonbox:add(new_button(label, icon, shortcut, command))
 end
 
-
+window:fullscreen()
+window:set_keep_above(true)
 window:resize(Gdk.Screen.width(), Gdk.Screen.height())
 window:show_all()
 
