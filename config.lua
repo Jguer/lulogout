@@ -4,9 +4,10 @@ style = {
     bgcolor = "0,0,0";
     theme = "simplistic";
     buttons = { "Cancel,cancel,q,:cancel",
-        "Restart,restart,r,systemctl start reboot",
-        "Shutdown,shutdown,p,systemctl start poweroff",
+        "Lock,lock,l,i3lock",
         "Suspend,suspend,s,systemctl start suspend",
         "Hibernate,hibernate,h,systemctl start hibernate",
-    "Lock,lock,l,i3lock" };
+        "Restart,restart,r,systemctl start reboot",
+        "Shutdown,shutdown,p,systemctl start poweroff"
+     };
 }
